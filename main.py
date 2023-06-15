@@ -13,4 +13,3 @@ if not is_connected:
     print("Error: could not connect to Redis")
     sys.exit(-1)
 print("Connected to Redis")
-

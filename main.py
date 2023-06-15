@@ -1,5 +1,6 @@
-import redis
 import sys
+import redis
+import functions as f
 
 r = redis.Redis(
   host='redis-12114.c293.eu-central-1-1.ec2.cloud.redislabs.com',
@@ -13,3 +14,11 @@ if not is_connected:
     print("Error: could not connect to Redis")
     sys.exit(-1)
 print("Connected to Redis")
+
+
+# test funzioni
+f.incrementa_punti_squadra("A", 1)
+f.incrementa_punti_squadra("B", 3)
+print(f.get_points("A"))
+print(f.get_points("B"))
+print(f.stampa_vincitore())

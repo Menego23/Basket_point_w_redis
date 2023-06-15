@@ -14,3 +14,4 @@ if not is_connected:
     sys.exit(-1)
 print("Connected to Redis")
 
+incrementa_punti_squadra("A", 2)

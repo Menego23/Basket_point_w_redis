@@ -21,6 +21,19 @@ def incrementa_punti_squadra(squadra, punti):
 
 def p_points(squadra):
     try:
-        r.get(f"punti_squadra_{squadra}")
+        print(r.get(f"punti_squadra_{squadra}"))
     except Exception as e:
         print(e, "\nSquadra è == ad 'A' o 'B'")
+
+
+#funzione per stampare il vincitore
+def stampa_vincitore():
+    if r.get("punti_squadra_A") > r.get("punti_squadra_B"):
+        return("Ha vinto la squadra A")
+    elif r.get("punti_squadra_A") < r.get("punti_squadra_B"):
+        return("Ha vinto la squadra B")
+    else:
+        return("Pareggio")
+
+
+
